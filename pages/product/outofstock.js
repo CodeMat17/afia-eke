@@ -10,7 +10,7 @@ const outofstock = () => {
         height={200}
         src='/out_of_stock.svg'
       />
-      <Text mx='4' mb='20' textAlign='center'>The product you seek is OUT OF STOCK. Please other products.</Text>
+      <Text mx='4' mb='20' textAlign='center'>The product you seek is OUT OF STOCK. Please try other products.</Text>
     </Box>
   );
 };
