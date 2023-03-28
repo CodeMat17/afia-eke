@@ -6,7 +6,7 @@ const LoadingPage = () => {
       w='full'
       minH='100vh'
       bg='white'
-      color='green'
+      color='green.600'
       opacity='0.67'
       display='flex'
       flexDir='column'
@@ -15,8 +15,7 @@ const LoadingPage = () => {
     >
       <Spinner p='8' />
       <Text py='6' letterSpacing='1px'>
-        {" "}
-        ...loading
+        Please wait
       </Text>
     </Box>
   );
