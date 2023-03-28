@@ -36,7 +36,7 @@ const ProductDetail = ({ product }) => {
               w='full'
               mt='6'
               color='white' py='6'
-              bgGradient='linear(to-r, #1FF361, pink.500 )'
+              bgGradient='linear(to-r, #1FF361, #f32ac2 )'
               _hover={{ bgGradient: "linear(to-l, #1FF361, pink.500 )" }}>
               ADD TO CART
             </Button>

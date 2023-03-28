@@ -60,7 +60,7 @@ const NavHeader = () => {
             pos='relative'>
             <BsCart4 size={25} color='black' />
             <Box
-              bg='#1FF361'
+              bg='#f32ac2'
               rounded='full'
               px='2'
               color='white'

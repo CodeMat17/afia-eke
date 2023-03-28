@@ -20,7 +20,7 @@ const MobileMenu = () => {
         <MenuButton
           as={IconButton}
           aria-label='Options'
-          icon={<HiMenuAlt3 size={25} color='#1FF361' />}
+          icon={<HiMenuAlt3 size={25} color='#f32ac2' />}
           variant='outline'
           shadow='md'
         />
