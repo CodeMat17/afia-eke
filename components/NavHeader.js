@@ -27,7 +27,7 @@ const NavHeader = () => {
         alignItems='center'
         justifyContent='space-between'>
         <Box cursor='pointer' onClick={() => router.push("/")}>
-          <Image alt='logo' src='/default.svg' height={20} width={130} />
+          <Image alt='logo' src='/default.svg' height={80} width={180} />
         </Box>
 
         <Box display='flex' alignItems='flex-end'>
