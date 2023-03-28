@@ -15,7 +15,7 @@ const MobileMenu = () => {
   const router = useRouter();
 
   return (
-    <Box display={{ base: "flex", sm: "none" }}>
+    <Box display={{ base: "flex", sm: "none" }} pr='4'>
       <Menu>
         <MenuButton
           as={IconButton}

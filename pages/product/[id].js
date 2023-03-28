@@ -9,10 +9,12 @@ const ProductDetail = ({ product }) => {
     <Box maxW='3xl' mx='auto' px='4' py='20'>
       {product.map((item) => (
         <Box
+          key={item.id}
           display='flex'
           flexDir={{ base: "column" }}
           justifyContent='center'
-          alignItems='center' gap='20px'>
+          alignItems='center'
+          gap='20px'>
           <Box w='250px' h='250px'>
             <Image
               loading='lazy'

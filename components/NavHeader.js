@@ -14,10 +14,11 @@ const NavHeader = () => {
       top='0'
       zIndex='60'
       py='3'
-      pr='3'
-      pl='2'
+      // pr='1'
+      pl='4'
       bg='white'
-      opacity='0.97'
+      bgGradient='linear(to-l, transparent, gray.400, gray.700 )'
+      opacity='0.95'
       shadow='md'>
       <Box
         maxW='6xl'
@@ -33,7 +34,6 @@ const NavHeader = () => {
           <Box
             display={{ base: "none", sm: "flex" }}
             color='#5478a9'
-            fontSize='lg'
             fontWeight='semibold'
             alignItems='center'>
             <Button
@@ -42,8 +42,15 @@ const NavHeader = () => {
               rounded='full'>
               HOME
             </Button>
-            <Button variant='ghost'rounded='full'>ABOUT US</Button>
-            <Button variant='ghost'rounded='full'>CONTACT US</Button>
+            <Button
+              variant='ghost'
+              rounded='full'
+              display={{ base: "none", md: "flex" }}>
+              ABOUT US
+            </Button>
+            <Button variant='ghost' rounded='full'>
+              CONTACT US
+            </Button>
           </Box>
           <Box
             onClick={() => router.push("/orders")}
