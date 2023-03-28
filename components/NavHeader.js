@@ -13,7 +13,7 @@ const NavHeader = () => {
       pos='sticky'
       top='0'
       zIndex='60'
-      py='2'
+      py='3'
       pr='3'
       pl='2'
       bg='white'
@@ -36,11 +36,14 @@ const NavHeader = () => {
             fontSize='lg'
             fontWeight='semibold'
             alignItems='center'>
-            <Button onClick={() => router.push("/")} variant='ghost'>
-              Home
+            <Button
+              onClick={() => router.push("/")}
+              variant='ghost'
+              rounded='full'>
+              HOME
             </Button>
-            <Button variant='ghost'>About Us</Button>
-            <Button variant='ghost'>Contact Us</Button>
+            <Button variant='ghost'rounded='full'>ABOUT US</Button>
+            <Button variant='ghost'rounded='full'>CONTACT US</Button>
           </Box>
           <Box
             onClick={() => router.push("/orders")}
@@ -48,9 +51,9 @@ const NavHeader = () => {
             ml='6'
             mr='10'
             pos='relative'>
-            <BsCart4 size={30} color='black' />
+            <BsCart4 size={25} color='black' />
             <Box
-              bg='red'
+              bg='#1FF361'
               rounded='full'
               px='2'
               color='white'

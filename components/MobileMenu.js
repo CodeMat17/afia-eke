@@ -20,19 +20,23 @@ const MobileMenu = () => {
         <MenuButton
           as={IconButton}
           aria-label='Options'
-          icon={<HiMenuAlt3 size={25} color='#5478a9' />}
+          icon={<HiMenuAlt3 size={25} color='#1FF361' />}
           variant='outline'
           shadow='md'
         />
         <MenuList>
-          <Box onClick={() => router.push("/")}>
-            <MenuItem icon={<HiOutlineHome size={20} />}>Home</MenuItem>
+          <Box onClick={() => router.push("/")} pb='2'>
+            <MenuItem icon={<HiOutlineHome size={20} />} fontSize='lg'>
+              Home
+            </MenuItem>
           </Box>
-          <Box onClick={() => router.push("/about-us")}>
-            <MenuItem icon={<TbSubtask size={20} />}>About Us</MenuItem>
+          <Box onClick={() => router.push("/about-us")} pb='2'>
+            <MenuItem icon={<TbSubtask size={20} />} fontSize='lg'>
+              About Us
+            </MenuItem>
           </Box>
-          <Box onClick={() => router.push("/contact-us")}>
-            <MenuItem icon={<MdOutlineContactPhone size={20} />}>
+          <Box onClick={() => router.push("/contact-us")} pb='2'>
+            <MenuItem icon={<MdOutlineContactPhone size={20} />} fontSize='lg'>
               Contact Us
             </MenuItem>
           </Box>

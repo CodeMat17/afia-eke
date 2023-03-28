@@ -15,7 +15,7 @@ const AfiaEkeCard = ({ id, name, price, image, instock, new_stock }) => {
       justifyContent='center'
       opacity={instock ? 1 : 0.5}>
       <Box
-        onClick={() => router.push(`/product/${instock ? id : 'outofstock'}`)}
+        onClick={() => router.push(`/product/${instock ? id : "outofstock"}`)}
         cursor='pointer'
         pos='relative'
         bg='gray.100'
@@ -30,11 +30,9 @@ const AfiaEkeCard = ({ id, name, price, image, instock, new_stock }) => {
           pos='absolute'
           left='4'
           gap='4px'
-          size='lg'
-          opacity='0.55'
-          color={instock ? "white" : "red.500"}
-          bg={instock ? "#5478a9" : "red.100"}>
-          {/* {instock && <TagRightIcon as={FaThumbsUp} color='yellow.400' />} */}
+          rounded='full'
+          border='1px'
+          color={instock ? "#1FF361" : "red.500"}>
           <TagLabel>{instock ? "In-stock" : "Out In-stock"}</TagLabel>
         </Tag>
         {instock && (
@@ -45,9 +43,10 @@ const AfiaEkeCard = ({ id, name, price, image, instock, new_stock }) => {
                 bottom='4'
                 right='4'
                 size='lg'
-                opacity='0.55'
-                color='red'
-                bg='gray.300'>
+                rounded='full'
+                opacity='0.7'
+                color='white'
+                bg='#1FF361'>
                 <TagLabel>New</TagLabel>
               </Tag>
             )}
@@ -68,8 +67,8 @@ const AfiaEkeCard = ({ id, name, price, image, instock, new_stock }) => {
           <Text>₦{price}</Text>
         </Box>
         {instock && (
-          <Box bg='gray.100' rounded='full' p='2' shadow='md'>
-            <BiCartDownload size={20} color='#5478a9' />
+          <Box bg='#1FF361' rounded='full' p='2'>
+            <BiCartDownload size={20} color='#white' />
           </Box>
         )}
       </Box>

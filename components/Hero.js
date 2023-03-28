@@ -36,7 +36,7 @@ const Hero = () => {
             Welcome to
           </Text>
           <Text
-            color='white'
+            color='#1FF361'
             fontSize={{ base: "6xl", md: "7xl" }}
             fontWeight='bold'
             letterSpacing='1px'>
@@ -48,7 +48,7 @@ const Hero = () => {
             fontWeight='light'>
             Your Online Shopping Mall
           </Text>
-          <Button rounded='full' size='lg' mt='6' color='#5478a9'>
+          <Button rounded='full' size='lg' mt='6' bg='#1FF361' color='white'>
             Start Shopping
           </Button>
         </Box>

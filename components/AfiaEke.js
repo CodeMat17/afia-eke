@@ -22,11 +22,11 @@ const AfiaEke = ({ products }) => {
       </Text>
       <Text fontSize='4xl' fontWeight='light' textAlign='center'>
         Products in{" "}
-        <chakra.span color='#5478a9' fontWeight='semibold'>
+        <chakra.span color='#1FF361' fontWeight='semibold'>
           Afia
         </chakra.span>
       </Text>
-      <Box bg='#5478a9' w='200px' h='1.5px' rounded='full' mx='auto' />
+      <Box bg='#1FF361' w='150px' h='2px' rounded='full' mx='auto' />
 
       <Box
         display='flex'
@@ -68,16 +68,14 @@ const AfiaEke = ({ products }) => {
               setAllProducts(products);
             }}
             leftIcon={<BiGridSmall />}
-            size='lg'
+            // size='lg'
             rounded='full'
             variant='outline'
             flexShrink='0'
             color={activeBtn === "all" ? "white" : ""}
-            bg={activeBtn === "all" ? "#5478a9" : ""}
+            bg={activeBtn === "all" ? "#1FF361" : ""}
             _hover={{
-              color: "blue.200",
-              border: "1px",
-              borderColor: "blue.200",
+              color: "pink.400",
               shadow: "md",
             }}>
             All
@@ -88,16 +86,14 @@ const AfiaEke = ({ products }) => {
               filter("shirt");
             }}
             leftIcon={<TbShirtSport />}
-            size='lg'
+            // size='lg'
             rounded='full'
             variant='outline'
             flexShrink='0'
             color={activeBtn === "shirt" ? "white" : ""}
-            bg={activeBtn === "shirt" ? "#5478a9" : ""}
+            bg={activeBtn === "shirt" ? "#1FF361" : ""}
             _hover={{
-              color: "blue.200",
-              border: "1px",
-              borderColor: "blue.200",
+              color: "pink.400",
               shadow: "md",
             }}>
             Shirts
@@ -108,16 +104,14 @@ const AfiaEke = ({ products }) => {
               filter("shoe");
             }}
             leftIcon={<RiFootprintFill />}
-            size='lg'
+            // size='lg'
             rounded='full'
             variant='outline'
             flexShrink='0'
             color={activeBtn === "shoe" ? "white" : ""}
-            bg={activeBtn === "shoe" ? "#5478a9" : ""}
+            bg={activeBtn === "shoe" ? "#1FF361" : ""}
             _hover={{
-              color: "blue.200",
-              border: "1px",
-              borderColor: "blue.200",
+              color: "pink.400",
               shadow: "md",
             }}>
             Shoes
@@ -128,16 +122,14 @@ const AfiaEke = ({ products }) => {
               filter("dress");
             }}
             leftIcon={<GiAmpleDress />}
-            size='lg'
+            // size='lg'
             rounded='full'
             variant='outline'
             flexShrink='0'
             color={activeBtn === "dress" ? "white" : ""}
-            bg={activeBtn === "dress" ? "#5478a9" : ""}
+            bg={activeBtn === "dress" ? "#1FF361" : ""}
             _hover={{
-              color: "blue.200",
-              border: "1px",
-              borderColor: "blue.200",
+              color: "pink.400",
               shadow: "md",
             }}>
             Dresses
@@ -148,16 +140,14 @@ const AfiaEke = ({ products }) => {
               filter("hoodie");
             }}
             leftIcon={<GiHoodie />}
-            size='lg'
+            // size='lg'
             rounded='full'
             variant='outline'
             flexShrink='0'
             color={activeBtn === "hoodie" ? "white" : ""}
-            bg={activeBtn === "hoodie" ? "#5478a9" : ""}
+            bg={activeBtn === "hoodie" ? "#1FF361" : ""}
             _hover={{
-              color: "blue.200",
-              border: "1px",
-              borderColor: "blue.200",
+              color: "pink.400",
               shadow: "md",
             }}>
             Hoodies
@@ -165,25 +155,23 @@ const AfiaEke = ({ products }) => {
         </Box>
       </Box>
 
-      {allProducts.length === 0 ? (
+      {!allProducts && (
+        <Text textAlign='center' py='12'>
+          No Product is available at the moment
+        </Text>
+      )}
+
+      {allProducts && allProducts.length === 0 ? (
         <Text textAlign='center' pt='8' pb='32'>
           {" "}
           Selected product(s) not available at the moment. Please try later.
         </Text>
       ) : (
         <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 4 }} spacingX='20px'>
-          {allProducts.length === 0 && (
-            <Box
-              border='1px'
-              textAlign='center'
-              w='full'
-              mx='auto'
-              display='flex'
-              justifyContent='center'></Box>
-          )}
-          {allProducts.map((product) => (
-            <AfiaEkeCard key={product.id} {...product} />
-          ))}
+          {allProducts &&
+            allProducts.map((product) => (
+              <AfiaEkeCard key={product.id} {...product} />
+            ))}
         </SimpleGrid>
       )}
     </Box>
