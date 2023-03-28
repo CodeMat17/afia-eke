@@ -6,16 +6,21 @@ const ProductDetail = ({ product }) => {
   console.log("prod", product);
 
   return (
-    <Box maxW='3xl' mx='auto' px='4' py='20'>
+    <Box maxW='3xl' mx='auto' px='4' py='12'>
       {product.map((item) => (
         <Box
           key={item.id}
           display='flex'
-          flexDir={{ base: "column" }}
+          flexDir={{ base: "column", md: "row" }}
           justifyContent='center'
           alignItems='center'
-          gap='20px'>
-          <Box w='250px' h='250px'>
+          gap='70px'>
+          <Box
+            w={{ base: "250px", md: "500px" }}
+            h={{ base: "250px", md: "400px" }}
+            display='flex'
+            alignItems='center'
+            justifyContent='center'>
             <Image
               loading='lazy'
               alt={item.name}
@@ -27,7 +32,14 @@ const ProductDetail = ({ product }) => {
           <Box w='full'>
             <Text fontSize='lg'>{item.name}</Text>
             <Text fontWeight='light'>{item.desc}</Text>
-            <Button></Button>
+            <Button
+              w='full'
+              mt='6'
+              color='white'
+              bgGradient='linear(to-r, #1FF361, pink.500 )'
+              _hover={{ bgGradient: "linear(to-l, #1FF361, pink.500 )" }}>
+              ADD TO CART
+            </Button>
           </Box>
         </Box>
       ))}
