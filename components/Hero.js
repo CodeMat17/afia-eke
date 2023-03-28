@@ -1,10 +1,11 @@
 import { Box, Button, Text } from "@chakra-ui/react";
+import Image from "next/image";
 import SwiperPix from "./SwiperPix";
 
 const Hero = () => {
   return (
     <Box
-      minH={{ base: "90vh", sm: '100vh', md: "95vh" }}
+      minH={{ base: "90vh", sm: "100vh", md: "95vh" }}
       pos='relative'
       bgImage={`url(/bg.webp)`}>
       {/* <Image alt='bg' width={1440} height={600} src='/bg.webp' /> */}
@@ -19,7 +20,7 @@ const Hero = () => {
       <Box
         w='full'
         pos='absolute'
-        top={{base: '90px', md: '150px'}}
+        top={{ base: "90px", md: "150px" }}
         // pl='20'
         display='flex'
         flexDir={{ base: "column", md: "row" }}
@@ -48,7 +49,25 @@ const Hero = () => {
             fontWeight='light'>
             Your Online Shopping Mall
           </Text>
-          <Button rounded='full' size='lg' mt='6' bg='#1FF361' color='gray.50'>
+          <Button
+            rounded='full'
+            size='lg'
+            mt='6'
+            bg='#1FF361'
+            leftIcon={
+              <Image
+                width={35}
+                height={30}
+                alt='shopping logo'
+                src='/shopping_logo.png'
+              />
+            }
+            // bgGradient='linear(to-b, #1FF361, green.800 )'
+            bgGradient='linear(to-br, #1FF361, #1FF361, #f32ac2 )'
+            color='gray.50'
+            _hover={{
+              bgGradient: "linear(to-tr, #1FF361, #1FF361, #f32ac2 )",
+            }}>
             Start Shopping
           </Button>
         </Box>

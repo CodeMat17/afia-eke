@@ -1,9 +1,12 @@
 import { supabase } from "@/lib/supabaseClient";
 import { Box, Button, Text } from "@chakra-ui/react";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { BsCart4 } from "react-icons/bs";
 
 const ProductDetail = ({ product }) => {
   console.log("prod", product);
+  const router = useRouter();
 
   return (
     <Box maxW='3xl' mx='auto' px='4' py='12'>
@@ -32,14 +35,38 @@ const ProductDetail = ({ product }) => {
           <Box w='full'>
             <Text fontSize='lg'>{item.name}</Text>
             <Text fontWeight='light'>{item.desc}</Text>
-            <Button
-              w='full'
+            <Box
               mt='6'
-              color='white' py='6'
-              bgGradient='linear(to-r, #1FF361, #f32ac2 )'
-              _hover={{ bgGradient: "linear(to-l, #1FF361, pink.500 )" }}>
-              ADD TO CART
-            </Button>
+              display='flex'
+              flexDir={{ base: "column", md: "row" }}
+              gap='10px'
+              w='full'>
+              <Button
+                w={{ base: "full", md: "70%" }}
+                color='white'
+                py='6'
+                rounded='full'
+                bgGradient='linear(to-tl, #1FF361, #1FF361, #f32ac2 )'
+                _hover={{
+                  bgGradient: "linear(to-bl, #1FF361, #1FF361, #f32ac2 )",
+                }}
+                rightIcon={<BsCart4 size={25} color='#f32ac2' />}>
+                ADD TO CART
+              </Button>
+              <Button
+                onClick={() => router.push("/")}
+                w={{ base: "full", md: "30%" }}
+                py='6'
+                rounded='full'
+                variant='outline'
+                borderColor='#1FF361'
+                color='#f32ac2'
+                _hover={{
+                  color: "#1FF361",
+                }}>
+                GO BACK
+              </Button>
+            </Box>
           </Box>
         </Box>
       ))}
