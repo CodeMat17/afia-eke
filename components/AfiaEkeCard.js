@@ -18,7 +18,7 @@ const AfiaEkeCard = ({ id, name, price, image, instock, new_stock }) => {
         onClick={() => router.push(`/product/${instock ? id : "outofstock"}`)}
         cursor='pointer'
         pos='relative'
-        bg='pink.100'
+        bg='pink.50'
         p='4'
         rounded='xl'
         w={{ base: "full", sm: "180px" }}
