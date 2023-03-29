@@ -18,21 +18,22 @@ const AfiaEkeCard = ({ id, name, price, image, instock, new_stock }) => {
         onClick={() => router.push(`/product/${instock ? id : "outofstock"}`)}
         cursor='pointer'
         pos='relative'
-        bg='gray.100'
+        bg='pink.100'
         p='4'
         rounded='xl'
-        w={{ base: "full", sm: "220px" }}
-        h={{ base: "full", sm: "220px" }}
+        w={{ base: "full", sm: "180px" }}
+        h={{ base: "full", sm: "180px" }}
         display='flex'
         justifyContent='center'>
         <Image alt={name} width={200} height={150} src={image} />
         <Tag
           pos='absolute'
-          left='4'
+          left='2'
+          top='2'
           gap='4px'
           rounded='full'
           border='1px'
-          color={instock ? "#1FF361" : "red.500"}>
+          color={instock ? "#f32ac2" : "red.400"}>
           <TagLabel>{instock ? "In-stock" : "Out In-stock"}</TagLabel>
         </Tag>
         {instock && (
@@ -40,9 +41,9 @@ const AfiaEkeCard = ({ id, name, price, image, instock, new_stock }) => {
             {new_stock && (
               <Tag
                 pos='absolute'
-                bottom='4'
-                right='4'
-                size='lg'
+                bottom='2'
+                right='2'
+                // size='lg'
                 rounded='full'
                 opacity='0.7'
                 color='white'
@@ -54,7 +55,7 @@ const AfiaEkeCard = ({ id, name, price, image, instock, new_stock }) => {
         )}
       </Box>
       <Box
-        w={{ base: "full", sm: "220px" }}
+        w={{ base: "full", sm: "180px" }}
         pt='1'
         px=''
         display='flex'
@@ -67,8 +68,8 @@ const AfiaEkeCard = ({ id, name, price, image, instock, new_stock }) => {
           <Text>₦{price}</Text>
         </Box>
         {instock && (
-          <Box bg='#1FF361' rounded='full' p='2'>
-            <BiCartDownload size={20} color='#white' />
+          <Box bg='pink.200' shadow='md' rounded='full' p='2'>
+            <BiCartDownload size={20} color='black' />
           </Box>
         )}
       </Box>

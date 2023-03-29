@@ -1,7 +1,7 @@
 import { Box, Button } from "@chakra-ui/react";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { BsCart4 } from "react-icons/bs";
+import LogoComponent from "./LogoComponent";
 import MobileMenu from "./MobileMenu";
 
 const NavHeader = () => {
@@ -26,9 +26,8 @@ const NavHeader = () => {
         display='flex'
         alignItems='center'
         justifyContent='space-between'>
-        <Box cursor='pointer' onClick={() => router.push("/")}>
-          <Image alt='logo' src='/default.svg' height={80} width={180} />
-        </Box>
+
+        <LogoComponent />
 
         <Box display='flex' alignItems='flex-end'>
           <Box

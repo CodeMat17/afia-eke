@@ -47,7 +47,7 @@ const Hero = () => {
             color='white'
             fontSize={{ base: "xl", md: "2xl" }}
             fontWeight='light'>
-            Your Online Shopping Mall
+            Your Online Gift Store
           </Text>
           <Button
             rounded='full'
