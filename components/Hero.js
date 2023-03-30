@@ -31,14 +31,16 @@ const Hero = () => {
         <Box textAlign={{ base: "center", md: "start" }} lineHeight='shorter'>
           <Text
             //   color='#5478a9'
-            color='gray.300'
+            color='white'
             fontSize='xl'
             fontWeight='light'
             letterSpacing='2px'>
             Welcome to
           </Text>
           <Text
-            color='#1FF361'
+            // color='#FFA101'
+            bgGradient='linear(to-l, #F32AC2, #FFA101)'
+            bgClip='text'
             fontSize={{ base: "6xl", md: "7xl" }}
             fontWeight='bold'
             letterSpacing='1px'>
@@ -54,7 +56,7 @@ const Hero = () => {
             rounded='full'
             size='lg'
             mt='6'
-            bg='#1FF361'
+            bg='#F32AC2'
             leftIcon={
               <Image
                 width={35}
@@ -64,8 +66,8 @@ const Hero = () => {
               />
             }
             // bgGradient='linear(to-b, #1FF361, green.800 )'
-            bgGradient='linear(to-r, #1FF361, #f32ac2 )'
-            color='gray.50'
+            // bgGradient='linear(to-r, #1FF361, #f32ac2 )'
+            color='white'
             _hover={{
               bgGradient: "linear(to-br, #1FF361, #1FF361, #f32ac2 )",
               shadow: "md",
