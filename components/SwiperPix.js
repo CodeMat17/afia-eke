@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import AnimatedText from "./AnimatedText";
 
 const pixs = [
   { id: 1, img: "/swiper-pix/pix1.png" },
@@ -20,22 +21,23 @@ const pixs = [
 
 const SwiperPix = () => {
   return (
-    <Box w={{base: '250px', sm: '300px'}} h='250px'>
-      <Swiper
-        slidesPerView={1}
-        loop={true}
-        centeredSlides={true}
-        autoplay={{ delay: 3000, disableOnInteraction: true }}
-        pagination={{ dynamicBullets: true }}
-        modules={[Autoplay]}
-        className='mySwiper'>
-        {pixs.map((pix) => (
-          <SwiperSlide key={pix.id}>
-            <Image alt='products' height={600} width={600} src={pix.img} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </Box>
+      <Box w={{ base: "250px", sm: "300px" }} h='250px'>
+        <Swiper
+          slidesPerView={1}
+          loop={true}
+          centeredSlides={true}
+          autoplay={{ delay: 3000, disableOnInteraction: true }}
+          pagination={{ dynamicBullets: true }}
+          modules={[Autoplay]}
+          className='mySwiper'>
+          {pixs.map((pix) => (
+            <SwiperSlide key={pix.id}>
+              <Image alt='products' height={600} width={600} src={pix.img} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Box>
+     
   );
 };
 

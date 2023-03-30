@@ -1,5 +1,6 @@
 import { Box, Button, Text } from "@chakra-ui/react";
 import Image from "next/image";
+import AnimatedText from "./AnimatedText";
 import SwiperPix from "./SwiperPix";
 
 const Hero = () => {
@@ -67,11 +68,18 @@ const Hero = () => {
             color='gray.50'
             _hover={{
               bgGradient: "linear(to-tr, #1FF361, #1FF361, #f32ac2 )",
+              shadow: "md",
+              transform: "translateX(-5px)",
+              transitionDuration: "0.2s",
+              transitionTimingFunction: "ease-in-out",
             }}>
             Start Shopping
           </Button>
         </Box>
         <SwiperPix />
+      </Box>
+      <Box pos='absolute' bottom='8' w='120px' h='120px'>
+        <AnimatedText img='/animated_text_white.webp' />
       </Box>
     </Box>
   );
