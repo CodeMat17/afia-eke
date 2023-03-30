@@ -68,8 +68,8 @@ const ProductDetail = ({ product }) => {
               <Text>Select size:</Text>
               <Box mt='1' display='flex' gap='10px'>
                 {sizes.map((item) => (
-                  <Box
-                    border='1px'
+                  <Box shadow='md'
+                    border='1px' borderColor='gray.400'
                     key={item.id}
                     display='flex'
                     justifyContent='center'
