@@ -47,7 +47,7 @@ const AfiaEkeCard = ({ id, name, price, image, instock, new_stock }) => {
                 rounded='full'
                 opacity='0.7'
                 color='white'
-                bg='#1FF361'>
+                bg='gray.800'>
                 <TagLabel>New</TagLabel>
               </Tag>
             )}

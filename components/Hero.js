@@ -64,12 +64,12 @@ const Hero = () => {
               />
             }
             // bgGradient='linear(to-b, #1FF361, green.800 )'
-            bgGradient='linear(to-br, #1FF361, #1FF361, #f32ac2 )'
+            bgGradient='linear(to-r, #1FF361, #f32ac2 )'
             color='gray.50'
             _hover={{
-              bgGradient: "linear(to-tr, #1FF361, #1FF361, #f32ac2 )",
+              bgGradient: "linear(to-br, #1FF361, #1FF361, #f32ac2 )",
               shadow: "md",
-              transform: "translateX(-5px)",
+              transform: "translateY(-5px)",
               transitionDuration: "0.2s",
               transitionTimingFunction: "ease-in-out",
             }}>
@@ -78,7 +78,7 @@ const Hero = () => {
         </Box>
         <SwiperPix />
       </Box>
-      <Box pos='absolute' bottom='8' w='120px' h='120px'>
+      <Box pos='absolute' bottom='16' w='120px' h='120px'>
         <AnimatedText img='/animated_text_white.webp' />
       </Box>
     </Box>

@@ -8,6 +8,21 @@ const ProductDetail = ({ product }) => {
   console.log("prod", product);
   const router = useRouter();
 
+  const colors = [
+    { id: "1", color: "red" },
+    { id: "2", color: "black" },
+    { id: "3", color: "gray.500" },
+    { id: "4", color: "green.500" },
+  ];
+
+  const sizes = [
+    { id: "1", size: "SM" },
+    { id: "4", size: "M" },
+    { id: "4", size: "L" },
+    { id: "2", size: "XL" },
+    { id: "3", size: "XXL" },
+  ];
+
   return (
     <Box maxW='3xl' mx='auto' px='4' py='12'>
       {product.map((item) => (
@@ -35,6 +50,38 @@ const ProductDetail = ({ product }) => {
           <Box w='full'>
             <Text fontSize='lg'>{item.name}</Text>
             <Text fontWeight='light'>{item.desc}</Text>
+            <Box pt='4' fontSize='sm'>
+              <Text>Select colour:</Text>
+              <Box mt='1' display='flex' gap='10px'>
+                {colors.map((item) => (
+                  <Box
+                    key={item.id}
+                    bg={item.color}
+                    w='40px'
+                    h='40px'
+                    rounded='full'
+                  />
+                ))}
+              </Box>
+            </Box>
+            <Box py='4' fontSize='sm'>
+              <Text>Select size:</Text>
+              <Box mt='1' display='flex' gap='10px'>
+                {sizes.map((item) => (
+                  <Box
+                    border='1px'
+                    key={item.id}
+                    display='flex'
+                    justifyContent='center'
+                    alignItems='center'
+                    w='40px'
+                    h='40px'
+                    rounded='full'>
+                    {item.size}
+                  </Box>
+                ))}
+              </Box>
+            </Box>
             <Box
               mt='6'
               display='flex'
