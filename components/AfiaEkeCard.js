@@ -68,8 +68,14 @@ const AfiaEkeCard = ({ id, name, price, image, instock, new_stock }) => {
           <Text>₦{price}</Text>
         </Box>
         {instock && (
-          <Box bg='pink.200' shadow='md' rounded='full' p='2'>
-            <BiCartDownload size={20} color='black' />
+          <Box
+            cursor='pointer'
+            onClick={() => router.push("/")}
+            bg='#f32ac2'
+            shadow='md'
+            rounded='full'
+            p='2'>
+            <BiCartDownload size={20} color='white' />
           </Box>
         )}
       </Box>

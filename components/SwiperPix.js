@@ -3,10 +3,18 @@ import Image from "next/image";
 import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import {
+  Image as ChakraImage,
+  keyframes,
+  usePrefersReducedMotion,
+} from "@chakra-ui/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import AnimatedText from "./AnimatedText";
+const spin = keyframes`
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+`;
 
 const pixs = [
   { id: 1, img: "/swiper-pix/pix1.png" },
@@ -20,8 +28,25 @@ const pixs = [
 ];
 
 const SwiperPix = () => {
+  const prefersReducedMotion = usePrefersReducedMotion();
+  const animation = prefersReducedMotion
+    ? undefined
+    : `${spin} infinite 20s linear`;
+
   return (
-      <Box w={{ base: "250px", sm: "300px" }} h='250px'>
+    <Box pos='relative' w={{ base: "350px", md: "400px", lg: "420px" }}>
+      <ChakraImage
+        w={{ base: "350px", md: "400px", lg: "420px" }}
+        h={{ base: "350px", md: "400px", lg: "420px" }}
+        animation={animation}
+        src='animated_text_ow.webp'
+      />
+      <Box
+        pos='absolute'
+        left={{ base: "85px", md: "110px", lg: "120px" }}
+        top={{ base: "80px", md: "110px" }}
+        w={{ base: "180px", sm: "180px" }}
+        h={{ base: "180px", sm: "180px" }}>
         <Swiper
           slidesPerView={1}
           loop={true}
@@ -32,12 +57,12 @@ const SwiperPix = () => {
           className='mySwiper'>
           {pixs.map((pix) => (
             <SwiperSlide key={pix.id}>
-              <Image alt='products' height={600} width={600} src={pix.img} />
+              <Image alt='products' height={400} width={400} src={pix.img} />
             </SwiperSlide>
           ))}
         </Swiper>
       </Box>
-     
+    </Box>
   );
 };
 

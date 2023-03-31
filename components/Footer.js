@@ -1,5 +1,7 @@
 import { Box, SimpleGrid, Text } from "@chakra-ui/react";
 import LogoComponent from "./LogoComponent";
+import { BsWhatsapp, BsInstagram } from "react-icons/bs";
+import { RiMailSendLine } from 'react-icons/ri' 
 
 const Footer = () => {
   return (
@@ -11,6 +13,17 @@ const Footer = () => {
             <Text fontSize='sm' w='180px' textAlign='end'>
               Your online gift store
             </Text>
+            <Box display='flex' gap='10px' mt='4' color='black'>
+              <Box bg='white' p='2' rounded='full'>
+                <BsWhatsapp size={20} />
+              </Box>
+              <Box bg='white' p='2' rounded='full'>
+                <BsInstagram size={20} />
+              </Box>
+              <Box bg='white' p='2' rounded='full'>
+                <RiMailSendLine size={20} />
+              </Box>
+            </Box>
           </Box>
 
           <Box my='8'>
@@ -40,7 +53,9 @@ const Footer = () => {
           </Box>
         </Box>
       </Box>
-      <Text bg='green.800' px='4' py='6' textAlign='center' color='white'>Afia Eke, &copy; 2023. All rights rserved.</Text>
+      <Text bg='green.800' px='4' py='6' textAlign='center' color='white'>
+        Afia Eke, &copy; 2023. All rights rserved.
+      </Text>
     </>
   );
 };

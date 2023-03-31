@@ -1,10 +1,3 @@
-// // import logo from "./logo.svg";
-
-// function Example() {
-
-//   return
-// }
-
 import { Image, keyframes, usePrefersReducedMotion } from "@chakra-ui/react";
 const spin = keyframes`
   from { transform: rotate(0deg); }

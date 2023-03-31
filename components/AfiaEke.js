@@ -22,11 +22,20 @@ const AfiaEke = ({ products }) => {
       </Text>
       <Text fontSize='4xl' fontWeight='light' textAlign='center'>
         Products in{" "}
-        <chakra.span color='#1FF361' fontWeight='semibold'>
+        <chakra.span
+          bgClip='text'
+          bgGradient='linear(to-l, #F32AC2, #FFA101)'
+          fontWeight='semibold'>
           Afia
         </chakra.span>
       </Text>
-      <Box bg='#1FF361' w='150px' h='2px' rounded='full' mx='auto' />
+      <Box
+        bgGradient='linear(to-l, #F32AC2, #FFA101)'
+        w='120px'
+        h='3px'
+        rounded='full'
+        mx='auto'
+      />
 
       <Box
         display='flex'
@@ -44,11 +53,7 @@ const AfiaEke = ({ products }) => {
           },
           "&::-webkit-scrollbar-track": {
             width: "2px",
-            // bg: "#f7f6f9",
           },
-          // "&::-webkit-scrollbar-thumb:hover": {
-          //   bg: "#929292",
-          // },
         }}>
         <Box
           display='flex'
@@ -72,10 +77,10 @@ const AfiaEke = ({ products }) => {
             rounded='full'
             variant='outline'
             flexShrink='0'
-            color={activeBtn === "all" ? "white" : ""}
-            bg={activeBtn === "all" ? "#1FF361" : ""}
+            borderColor={activeBtn === "all" ? "" : "#FFA101"}
+            color={activeBtn === "all" ? "white" : "#FFA101"}
+            bg={activeBtn === "all" ? "#f32ac2" : ""}
             _hover={{
-              color: "pink.400",
               shadow: "md",
             }}>
             All
@@ -86,14 +91,13 @@ const AfiaEke = ({ products }) => {
               filter("shirt");
             }}
             leftIcon={<TbShirtSport />}
-            // size='lg'
             rounded='full'
             variant='outline'
             flexShrink='0'
-            color={activeBtn === "shirt" ? "white" : ""}
-            bg={activeBtn === "shirt" ? "#1FF361" : ""}
+            borderColor={activeBtn === "shirt" ? "" : "#FFA101"}
+            color={activeBtn === "shirt" ? "white" : "#FFA101"}
+            bg={activeBtn === "shirt" ? "#f32ac2" : ""}
             _hover={{
-              color: "pink.400",
               shadow: "md",
             }}>
             Shirts
@@ -108,10 +112,10 @@ const AfiaEke = ({ products }) => {
             rounded='full'
             variant='outline'
             flexShrink='0'
-            color={activeBtn === "shoe" ? "white" : ""}
-            bg={activeBtn === "shoe" ? "#1FF361" : ""}
+            borderColor={activeBtn === "shoe" ? "" : "#FFA101"}
+            color={activeBtn === "shoe" ? "white" : "#FFA101"}
+            bg={activeBtn === "shoe" ? "#f32ac2" : ""}
             _hover={{
-              color: "pink.400",
               shadow: "md",
             }}>
             Shoes
@@ -126,10 +130,10 @@ const AfiaEke = ({ products }) => {
             rounded='full'
             variant='outline'
             flexShrink='0'
-            color={activeBtn === "dress" ? "white" : ""}
-            bg={activeBtn === "dress" ? "#1FF361" : ""}
+            borderColor={activeBtn === "dress" ? "" : "#FFA101"}
+            color={activeBtn === "dress" ? "white" : "#FFA101"}
+            bg={activeBtn === "dress" ? "#f32ac2" : ""}
             _hover={{
-              color: "pink.400",
               shadow: "md",
             }}>
             Dresses
@@ -144,10 +148,10 @@ const AfiaEke = ({ products }) => {
             rounded='full'
             variant='outline'
             flexShrink='0'
-            color={activeBtn === "hoodie" ? "white" : ""}
-            bg={activeBtn === "hoodie" ? "#1FF361" : ""}
+            borderColor={activeBtn === "hoodie" ? "" : "#FFA101"}
+            color={activeBtn === "hoodie" ? "white" : "#FFA101"}
+            bg={activeBtn === "hoodie" ? "#f32ac2" : ""}
             _hover={{
-              color: "pink.400",
               shadow: "md",
             }}>
             Hoodies

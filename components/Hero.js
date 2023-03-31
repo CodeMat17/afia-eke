@@ -19,20 +19,21 @@ const Hero = () => {
         h='full'
       />
       <Box
+        pl=''
         w='full'
         pos='absolute'
-        top={{ base: "90px", md: "150px" }}
+        top={{ base: "70px", md: "80px" }}
         // pl='20'
         display='flex'
         flexDir={{ base: "column", md: "row" }}
-        gap={{ base: "30px", md: "100px" }}
+        gap={{ md: "20px", lg: "60px" }}
         alignItems='center'
         justifyContent='center'>
         <Box textAlign={{ base: "center", md: "start" }} lineHeight='shorter'>
           <Text
             //   color='#5478a9'
             color='white'
-            fontSize='xl'
+            fontSize={{ base: "xl", md: "2xl" }}
             fontWeight='light'
             letterSpacing='2px'>
             Welcome to
@@ -58,12 +59,14 @@ const Hero = () => {
             mt='6'
             bg='#F32AC2'
             leftIcon={
-              <Image
-                width={35}
-                height={30}
-                alt='shopping logo'
-                src='/shopping_logo.png'
-              />
+              <Box bg='white' rounded='full' p='1'>
+                <Image
+                  width={30}
+                  height={30}
+                  alt='shopping logo'
+                  src='/shopping_logo.webp'
+                />
+              </Box>
             }
             // bgGradient='linear(to-b, #1FF361, green.800 )'
             // bgGradient='linear(to-r, #1FF361, #f32ac2 )'
@@ -79,9 +82,6 @@ const Hero = () => {
           </Button>
         </Box>
         <SwiperPix />
-      </Box>
-      <Box pos='absolute' bottom='16' w='120px' h='120px'>
-        <AnimatedText img='/animated_text_white.webp' />
       </Box>
     </Box>
   );
